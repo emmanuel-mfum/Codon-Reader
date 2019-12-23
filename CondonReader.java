@@ -1,13 +1,13 @@
-import javax.swing.JOptionPane;
+import javax.swing.JOptionPane; // import appropriate classes
 import java.util.Scanner;
 public class CondonReader {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		 Scanner console = new Scanner(System.in);
-		 JOptionPane.showMessageDialog(null, "Welcome to the Codon Reader");
-		 String codon = " ";
+		 Scanner console = new Scanner(System.in); // creates a Scanner object
+		 JOptionPane.showMessageDialog(null, "Welcome to the Codon Reader"); // Display to the user a welcoming message
+		 String codon = " "; // initialize the String variable to an empty string
 		 int  execution;
 
 
@@ -15,7 +15,7 @@ public class CondonReader {
 	do {
 		 codon = JOptionPane.showInputDialog("Please type the codon" + "\n"+ "The codon must be three characters long and include the letters A,G,U and C");
 
-		 switch(codon) {
+		 switch(codon) { // the switch checks the value of the String variable named codon against all the follwing cases
 
 		 case "UUC":
 		 case "uuc":
@@ -187,19 +187,19 @@ public class CondonReader {
 					System.out.println("Glycine - (Gly)");
 					break;
 		 default:
-				System.out.println("Wrong input");
-
+				System.out.println("Wrong input"); //if the input doesn't correspond to any of the preceding cases, the sentence "Wrong input" is printed
+							          
 
 
 		 	}
 
-		 System.out.println("Do you want to continue ? Enter 1 to continue or enter anything else to stop");
+		 System.out.println("Do you want to continue ? Enter 1 to continue or enter anything else to stop"); // whatever the input, the user is prompted for a decision, to continue or not
 		 execution = console.nextInt();
 
 
-	 }while(execution == 1);
+	 }while(execution == 1); // the do...while loop will be execute at least once, but will only continue if the integer variable execution is equal to 1
 
-	  System.out.print("You have exited the Codon Reader Program");
+	  System.out.print("You have exited the Codon Reader Program"); // Exit message
 
 	  console.close();
 
